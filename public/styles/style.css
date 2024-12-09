@@ -1,4 +1,14 @@
+/* Define CSS Variables for Colors */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --header-background: #333;
+    --header-text-color: #fff;
+}
 
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +18,8 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
     background-color: black;
-    color: #333;
+    color: var(--text-color);
 }
 
 a {
@@ -24,10 +33,9 @@ ul {
 
 /* Header */
 header {
-    background-color: #333;
     background-color: black;
-    color: #fff;
-    padding: 10px 0px;
+    color: var(--header-text-color);
+    padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -39,7 +47,6 @@ header {
 
 .nav-links {
     display: flex;
-    /* justify-content: space-around; */
     margin-right: 20px;
 }
 
@@ -48,7 +55,7 @@ header {
 }
 
 .nav-links a {
-    color: #fff;
+    color: var(--header-text-color);
     padding: 5px 10px;
     transition: background-color 0.3s;
 }
@@ -86,7 +93,7 @@ header {
 }
 
 .btn {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     padding: 10px 20px;
     border: none;
     color: white;
@@ -96,7 +103,7 @@ header {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: var(--secondary-color);
 }
 
 /* About Section */
@@ -106,10 +113,22 @@ header {
     text-align: center;
 }
 
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
 /* Skills Section */
 #skills {
     padding: 60px 20px;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
 }
 
 .skills-grid {
@@ -119,7 +138,7 @@ header {
 }
 
 .skill-card {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
     padding: 20px;
     margin: 10px;
@@ -143,7 +162,7 @@ header {
 }
 
 .project-card {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
     padding: 20px;
     border-radius: 5px;
@@ -153,7 +172,7 @@ header {
 /* Contact Section */
 #contact {
     padding: 60px 20px;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
     text-align: center;
 }
 
@@ -173,7 +192,7 @@ input, textarea {
 
 button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: var(--primary-color);
     border: none;
     color: white;
     border-radius: 5px;
@@ -182,31 +201,13 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--secondary-color);
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--header-background);
+    color: var(--header-text-color);
     text-align: center;
     padding: 20px;
-}
-
-#about {
-    padding: 60px 20px;
-    background-color: white;
-    text-align: center;
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-#about p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    color: #333;
 }
