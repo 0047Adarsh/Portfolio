@@ -10,24 +10,33 @@
 </head>
 <body>
     <header>
-        <nav>
+        <div class="social-links">
             <!-- <div class="logo">Adarsh A Devadiga</div> -->
+            <ul class="nav-links">
+                <li class="profile-link"><a href="https://github.com/0047Adarsh" target="_blank"><i class='bx bxl-github'></i></a></li>
+                <li class="profile-link"><a href="https://www.linkedin.com/in/adarsh-a-devadiga-/" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+            </ul>
+        </div>
+        <nav>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>   
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://drive.google.com/file/d/1mgeOYYgHXMLalFhf3gOP6zUKjGtEwQNM/view?usp=drive_link" target="_blank">Resume</a></li>
+                <li><a href="https://drive.google.com/file/d/14aEV382ta901RKONWTy3zAIye1Uy3i5v/view?usp=sharing" target="_blank">Resume</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
+    <section class="hero" id="home"> 
+        <div class="hero-content"> 
             <h1>Hello, I'm <span>Adarsh A Devadiga</span></h1>
-            <p>Full Stack Developer with expertise in building scalable web applications and cloud solutions.</p>
+            <!-- <p>Full Stack Developer with expertise in building scalable web applications and cloud solutions.</p> -->
             <p>A Full Stack Developer with expertise in building scalable web applications.</p>
             <a href="#projects" class="btn">View My Work</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://ik.imagekit.io/Adarsh0047/IMG-20190603-WA0089.jpg?updatedAt=1736446733629" alt="hero-image" class="hero-image">
         </div>
     </section>
 
@@ -85,37 +94,34 @@
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <form action="#">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+        <h2>Reach out to me!!</h2>
+        <form action="/contact" method="post">
+            <input name="name" type="text" placeholder="Your Name" required>
+            <input name="email" type="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
 
-    <section id="resume">
-        <h2>Resume</h2>
-        <a href="https://drive.google.com/uc?export=download&id=1mgeOYYgHXMLalFhf3gOP6zUKjGtEwQNM" class="btn" download>Download My Resume</a>
-    </section>
 
-    <section id="testimonials">
+
+    <!-- <section id="testimonials">
         <h2>Testimonials</h2>
         <blockquote>
             <p>"Adarsh is a fantastic developer who consistently delivers high-quality work!" - Client Name</p>
         </blockquote>
-    </section>
+    </section> -->
 
-    <footer>
+    <!-- <footer>
         <p>&copy; 2024 Adarsh A Devadiga. All rights reserved.</p>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/adarsh-devadiga" target="_blank">LinkedIn</a>
             <a href="https://github.com/adarsh-devadiga" target="_blank">GitHub</a>
             <a href="https://twitter.com/adarsh-devadiga" target="_blank">Twitter</a>
         </div>
-    </footer>
+    </footer> -->
     <div class="footer-container">
-        <div class="footer-content">
+        <!-- <div class="footer-content">
             <div class="company-info">
                 <div class="media-icons">
                     <a class="social-media" href="https://www.instagram.com/wesli_innovation_pvt_ltd" target="_blank"><i class='bx bxl-instagram'></i></a>
@@ -128,7 +134,7 @@
                 <a href="#">Community</a>
             </div>
             
-        </div>
+        </div> -->
         <div class="footer-agreement">
             <p>© Adarsh A Devadiga 2024. All Rights Reserved.</p>
         </div>

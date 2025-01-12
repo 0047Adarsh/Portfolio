@@ -29,6 +29,10 @@ ul {
     list-style: none;
 }
 
+.profile-link
+{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    font-size: 26px;
+}
 /* Header */
 header {
     background-color: black;
@@ -36,11 +40,11 @@ header {
     padding: 10px 0;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 15px;
     z-index: 1000;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: space-between;
 }
 
 .nav-links {
@@ -68,6 +72,19 @@ header {
     font-weight: bold;
     margin-left: 20px;
 }
+.hero-image
+{
+    width: 300px;
+    border-radius: 300px;
+}
+
+.hero-image::after
+{
+    width: 600px;
+    border-radius: 300px;
+    background-color: wheat;
+}
+
 
 /* Hero Section */
 .hero {
@@ -79,6 +96,7 @@ header {
     background-size: cover;
     color: white;
     text-align: center;
+    gap: 40px;
 }
 
 .hero-content h1 {
