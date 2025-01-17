@@ -40,7 +40,7 @@ header {
     padding: 10px 0;
     position: fixed;
     width: 100%;
-    top: 15px;
+    top: 0px;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -206,6 +206,35 @@ input, textarea {
     border-radius: 5px;
 }
 
+.textarea-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.textarea-container i {
+    position: absolute;
+    top: 10px; /* Adjust based on design */
+    left: 10px; /* Adjust based on design */
+    color: #ccc; /* Icon color */
+    pointer-events: none; /* Ensures the icon doesn't interfere with text input */
+    font-size: 20px; /* Adjust size based on design */
+}
+
+.textarea-container textarea {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Add left padding to create space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none; /* Optional: Disable resizing */
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+textarea{
+    resize: vertical;
+}
 button {
     padding: 10px;
     background-color: var(--primary-color);
@@ -297,4 +326,20 @@ footer {
     border-top: white 1px solid;
     padding-top: 10px;
     justify-content: center;
+}
+
+
+
+
+#contacts
+{
+    background-color: white;
+}
+
+.contact-name
+{
+    width: 300px;
+    border: 1px solid black;   
+    border-radius: 100px;
+    padding-left: 10px;
 }

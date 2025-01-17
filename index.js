@@ -1,6 +1,7 @@
 import express from "express";
 import ejs from "ejs";
 import {dirname} from 'path';
+import path from 'path';
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
 import nodemailer from "nodemailer";
@@ -19,6 +20,10 @@ dotenv.config()
 app.get('/',(req,res)=>{
     res.render('index');
 })
+
+app.get('/ex', (req, res) => {
+    res.render('example');
+});
 
 const transporter = nodemailer.createTransport({
     service: "gmail",
