@@ -21,8 +21,12 @@ app.get('/',(req,res)=>{
     res.render('index');
 })
 
+// app.get('/ex', (req, res) => {
+//     res.render('example');
+// });
+
 app.get('/ex', (req, res) => {
-    res.render('example');
+    res.sendFile(path.join(__dirname, 'public', 'example.html'));
 });
 
 const transporter = nodemailer.createTransport({

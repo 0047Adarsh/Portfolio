@@ -18,6 +18,7 @@ body {
     line-height: 1.6;
     background-color: black;
     color: var(--text-color);
+    background: linear-gradient(to right, #000428, #004e92);
 }
 
 a {

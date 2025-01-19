@@ -1,0 +1,251 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    animation: fadeIn 1s ease-out;
+    background: linear-gradient(to right, #000428, #004e92);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 60px 20px;
+    
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+h2 {
+    font-size: 2rem; /* Reduced font size */
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    animation: fadeIn 1s ease-out;
+}
+
+h2:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+/* Contact Section */
+.contact-form{
+    width: 350px;
+    display: flex;
+    text-align: center;
+    background-color: purple;
+    background: linear-gradient(to right, #093028, #237a57);
+}
+#contacts {
+    background-color: #fff;
+    border-radius: 12px; /* Softer corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 25px; /* Reduced padding for a smaller form */
+    text-align: center;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+#contacts div p {
+    color: #777;
+    font-size: 1rem; /* Slightly smaller text */
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+#contacts form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 1s;
+    border: 1px solid black;
+    padding: 30px 30px;
+    border-radius: 20px;
+}
+
+.contact-name, input, textarea {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 0px solid #ddd;
+    border-radius: 50px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    outline: none;
+    color: #333;
+}
+
+.contact-name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contact-name i {
+    font-size: 1.5rem;
+    color: #333;
+    margin-right: 12px;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+textarea {
+    min-height: 120px; /* Reduced height for a more compact form */
+    resize: vertical;
+    border-radius: 12px;
+}
+
+input:focus, textarea:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+button {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #5a53e5;
+    transform: translateY(-5px);
+    animation: buttonHover 0.3s ease-out;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes buttonHover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contacts form {
+        padding: 0 20px;
+    }
+
+    section {
+        max-width: 90%; /* Make section take up more space on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-name i {
+        font-size: 1.3rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+
+/* Styling for the container that holds both the icon and the textarea */
+.textarea-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 10px;  /* Space between icon and textarea */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.textarea-container i {
+    font-size: 1.5rem;
+    color: #6c63ff; /* Icon color */
+    position: absolute;
+    left: 10px; /* Positioning the icon to the left */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.textarea-container textarea {
+    width: 100%;
+    padding: 12px 12px 12px 40px; /* Add left padding to avoid overlap with the icon */
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: transparent; /* Make background transparent so the box looks unified */
+    color: #333;
+    resize: vertical;
+    min-height: 120px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.textarea-container textarea:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+    transform: translateY(-2px);
+}
